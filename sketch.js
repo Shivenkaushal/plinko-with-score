@@ -78,14 +78,13 @@ function draw() {
     {
        particle.display();
         
-        if (particle.body.position.y>760)
-        {
-              if (particle.body.position.x < 300) 
+       
+              if (particle.body.position.x < 300 && particle.body.position.y>760) 
               {
                   score=score+500;      
                   particle=null;
                   if ( count>= 5) gameState ="end";                          
-              }
+              
 
 
               else if (particle.body.position.x < 600 && particle.body.position.x > 301 ) 
@@ -117,7 +116,7 @@ function draw() {
 
 function mousePressed()
 {
-  if(gameState!=="end")
+  if(gameState==="start")
   {
       count++;
      particle=new Particle(mouseX, 10, 10, 10); 
