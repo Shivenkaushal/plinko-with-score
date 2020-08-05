@@ -6,6 +6,7 @@ var particles = [];
 var plinkos = [];
 var divisions =[];
 var particle;
+var particles;
 
 var divisionHeight=300;
 var score =0;
@@ -119,6 +120,6 @@ function mousePressed()
   if(gameState==="start")
   {
       count++;
-     particle=new Particle(mouseX, 10, 10, 10); 
+     particles=new Particle(mouseX, 10, 10, 10); 
   }   
 }
